@@ -1,0 +1,19 @@
+Leia o arquivo com os valores criado pelo programa;
+
+arquivo=fopen("nome_do_arquivo.txt","r");
+if(arquivo==NULL){printf("Erro No Arquivo");exit(1);}
+i=0;
+while( fscanf(arquivo,"%s",&name[i])!=EOF && fscanf(arquivo,"%s",&endereco[i])!=EOF
+    && fscanf(arquivo,"%s",&cidade[i])!=EOF && fscanf(arquivo,"%s",&estado[i])!=EOF
+    && fscanf(arquivo,"%s",&cpf[i])!=EOF){
+    i++;
+}
+fclose(arquivo);
+printf("\n\n");
+for(i=0;i<quant;i++){
+    printf("Nome ------> %s\n",name[i]    );
+    printf("Endereço --> %s\n",endereco[i]);
+    printf("Cidade ----> %s\n",cidade[i]  );
+    printf("Estado ----> %s\n",estado[i]  );
+    printf("cpf -------> %s\n\n",cpf[i]   );
+}
